@@ -1,0 +1,37 @@
+public class relation{
+    public static void main(String[] args){
+        father f=new father();
+        f.blood();
+        f.nonblood();
+        mother m=new mother();
+        m.blood();
+        m.nonblood();
+    }
+}
+
+interface family{
+    void blood();
+}
+
+interface friends{
+    void nonblood();
+}
+
+class father implements family,friends{
+    public void blood(){
+         System.out.println("Father's mother name is Shivanya");
+    }
+    public void nonblood(){
+        System.out.println("Father's Friend name is Mani");
+    }
+}
+
+class mother implements family,friends{
+    public void blood(){
+        System.out.println("Mother's Father name is Melvin");
+    }
+    public void nonblood(){
+        System.out.println("Mother's Friend name is Sindu");
+    }
+}
+
